@@ -103,7 +103,6 @@ func createAPIClient(ctx context.Context) (manipulate.Manipulator, error) {
 	}
 
 	// Unmarshall the data in the data structure.
-	var appCred *gaia.Credential
 	appCred, tlsConfig, err := midgardclient.ParseCredentials(data)
 	if err != nil {
 		return nil, fmt.Errorf("unable to parse credential: %s", err)
