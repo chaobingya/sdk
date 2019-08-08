@@ -29,6 +29,7 @@ The example uses the Aporeto SKD that is mainly comprised of the following libra
 2. Navigate to example and run it:
 
 ```bash
+go get ./...
 go run main.go
 ```
 

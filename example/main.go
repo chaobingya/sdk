@@ -35,8 +35,8 @@ func main() {
 	ns := gaia.NewNamespace()
 	ns.Name = "test"
 
-	subctx, cancel := context.WithTimeout(ctx, 30*time.Second)
-	defer cancel()
+	subctx, subcancel := context.WithTimeout(ctx, 30*time.Second)
+	defer subcancel()
 
 	// Create a manipulate context. Note, that we use the subcontext.
 	// In case of failures, the manipulate client will do retries
